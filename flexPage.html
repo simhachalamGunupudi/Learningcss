@@ -1,0 +1,102 @@
+<html>
+<body>
+<head>
+<style> 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  text-align: center;
+}
+
+@media screen and (orientation:landscape) {
+  .container {
+    position: absolute;
+    display: flex;
+    width: 75vmin;
+    height: 100vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .div1,
+  .div2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 32.5vmin;
+    height: 100vmin;
+    background-color: #ddd;
+  }
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  width: 100vmin;
+  height: 100vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.div1,
+.div2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 50vmin;
+  height: 100vmin;
+  background-color: hsla(0, 0%, 0%, 0.1);
+}
+
+.background1,
+.background2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.background1 {
+  background: url("https://www.w3schools.com/css/img_fjords.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background2 {
+  background: url("https://www.w3schools.com/howto/img_mountains.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.div1:hover~.background1 {
+  display: flex;
+  opacity: 1;
+}
+
+.div2:hover~.background2 {
+  display: flex;
+  opacity: 1;
+}
+
+</style>
+</head>
+<div class="container">
+  <a href="#" class="div1">Div 1</a>
+  <div class="background1"></div>
+  <a href="#" class="div2">Div 2</a>
+  <div class="background2"></div>
+</div>
+</body>
+</html>
